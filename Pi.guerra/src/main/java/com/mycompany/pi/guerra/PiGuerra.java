@@ -84,12 +84,12 @@ public class PiGuerra {
                 do {
                     System.out.println("onde você está?");
                     onde = input.next();
-                    if (onde != "hiroshima" | onde != "Hiroshima" | onde != "HIROSHIMA") {
-                        System.out.println("você ainda não sabe onde está! tente novamente! (dica: bomba nuclear!");
-                    } else {
+                    if ( onde.equalsIgnoreCase("hiroshima")) {
                         System.out.println("você acertou onde!");
+                    } else {
+                        System.out.println("você ainda não sabe onde está! tente novamente! (dica: bomba nuclear!");
                     }
-                } while (onde != "hiroshima" | onde != "Hiroshima" | onde != "HIROSHIMA");
+                } while ( !onde.equalsIgnoreCase("hiroshima"));
                 do {
                     System.out.println("em quando você está?");
                     System.out.println("dia:");
